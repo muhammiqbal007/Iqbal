@@ -1,0 +1,146 @@
+Customer Churn Prediction in E-Commerce
+📌 Project Overview
+
+This project aims to develop a machine learning model to predict customer churn in an e-commerce company.
+
+Customer churn significantly impacts revenue, and early detection allows businesses to implement targeted retention strategies instead of mass promotions.
+
+🎯 Business Problem
+
+The company currently lacks a predictive system to identify customers at risk of churn.
+
+As a result:
+
+Retention campaigns are applied broadly
+
+Promotion costs are inefficient
+
+Revenue loss occurs due to undetected churn
+
+🧠 Objective
+
+To build a classification model that:
+
+Predicts customer churn
+
+Achieves high recall for churn detection
+
+Supports targeted retention strategy
+
+Reduces potential revenue loss
+
+📊 Dataset Information
+
+Total records: 3,941 customers
+
+Target variable: Churn (0 = No, 1 = Yes)
+
+Churn rate: 17%
+
+Key features include:
+
+Satisfaction Score
+
+Complaint
+
+Day Since Last Order
+
+Cashback Amount
+
+Tenure
+
+Each row represents one unique customer.
+
+⚙️ Methodology
+1️⃣ Data Preparation
+
+Missing value imputation (median)
+
+One-hot encoding for categorical variables
+
+Stratified train-test split
+
+Class imbalance handling using class_weight='balanced'
+
+2️⃣ Modeling
+
+Models evaluated:
+
+Logistic Regression
+
+Random Forest
+
+Evaluation metric:
+
+Recall (primary)
+
+ROC AUC (secondary)
+
+Final model selected:
+
+Logistic Regression (Recall = 79%, ROC AUC = 0.87)
+
+📈 Model Performance
+
+Recall (Churn): 79%
+
+Accuracy: 80%
+
+ROC AUC: 0.87
+
+The model successfully detects 8 out of 10 churn customers.
+
+💰 Business Impact Simulation
+
+Assumption:
+
+Revenue loss per churn: Rp 300,000
+
+If 100 customers churn:
+
+79 can be detected
+
+Potential revenue protected: Rp 23.7 million
+
+This enables efficient and targeted retention strategy.
+
+🎯 Risk Segmentation Strategy
+
+Customers are segmented into:
+
+High Risk → Personalized retention offer
+
+Medium Risk → Reminder & soft promotion
+
+Low Risk → No intervention
+
+🚀 Implementation Plan
+
+Monthly churn scoring
+
+Quarterly model retraining
+
+Integration with CRM system
+
+⚠️ Limitations
+
+Based on historical data
+
+No Customer Lifetime Value (CLV) included
+
+Not real-time streaming data
+
+External market factors not considered
+
+📂 Repository Structure
+
+Ecommerce_Churn_Final.ipynb → Full analysis and modeling
+
+final_model.pkl → Saved trained model
+
+data_ecommerce_customer_churn.csv → Dataset used
+
+👤 Author
+
+Muhammad Iqbal
+Capstone Project – Module 3
